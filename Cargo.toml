@@ -1,6 +1,17 @@
 [package]
 name = "windows-service-template"
 version = "0.1.0"
+authors = ["Confused Engineer"]
 edition = "2021"
+build = "build.rs"
 
 [dependencies]
+windows-service = "0.7.0"
+
+[build-dependencies]
+winres = "0.1"
+static_vcruntime = "2.0"
+
+[[bin]]
+name = "ServiceTemplate"
+path = "src/main.rs"
