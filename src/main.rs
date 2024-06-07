@@ -75,7 +75,8 @@ fn run_service(arguments: Vec<OsString>) -> windows_service::Result<()> {
     'outer: loop {
 
 
-        //Do some work on repeat 
+        //Put your code in program_code
+        windows_service_template::program_code::main();
 
 
         //inner loop checks to see if the sender from the event handler has sent a message to Stop/Shutdown, will timeout and continue if no message was sent
